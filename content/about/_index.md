@@ -1,5 +1,5 @@
 ---
 title: "关于我"
 ---
-这里写一段自我介绍。
+Hello my name is Andy Chang, a sophomore student majoring computer science in MUC. I aspire to be a backend developer.
 
