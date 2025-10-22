@@ -1,0 +1,57 @@
+baseURL = "https://your-project.vercel.app"   # 先占位，部署后可改为你自定义域名
+languageCode = "zh-cn"
+title = "我的博客"
+theme = "PaperMod"
+paginate = 10
+
+# 生产构建建议：在 Vercel 写构建命令 "hugo --gc --minify"
+# 并设置环境变量：HUGO_VERSION = 0.152.0
+
+[params]
+  defaultTheme = "auto"              # 自动深/浅色
+  ShowReadingTime = true
+  ShowToc = true
+  TocOpen = false
+  ShowShareButtons = true
+  comments = false                    # 如需评论，后续可接入 Waline/Disqus 等
+  description = "记录与分享"
+  author = "你的名字"
+
+  # 首页信息（PaperMod 的 home-info mode）
+  homeInfoParams = { Title = "你好👋", Content = "这是我的技术博客，记录后端开发、算法与成长。" }
+
+  # 代码高亮（Chroma）
+  [params.assets]
+    disableHLJS = true
+  [params.highlight]
+    noClasses = false
+    guessSyntax = true
+    lineNos = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true       # 允许在 Markdown 中使用原生 HTML（如 <br>、视频 iframe 等）
+
+# 社交链接（按需开启）
+# [[params.socialIcons]]
+#   name = "github"
+#   url = "https://github.com/yourname"
+
+# 菜单示例
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 1
+[[menu.main]]
+  name = "文章"
+  url = "/posts/"
+  weight = 2
+[[menu.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 3
+
+# 多语言（可选示例）
+# [languages.en]
+#   languageName = "English"
+#   weight = 2
