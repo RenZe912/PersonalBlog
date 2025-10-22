@@ -1,6 +1,5 @@
 ---
-title: "About Me"
+title: "关于我"
 ---
-My name is Andy Chang, a sophermore majoring computer science in MUC. I aspire to become a backend engineer.
-
+这里写一段自我介绍。
 

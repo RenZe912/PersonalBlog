@@ -10,10 +10,12 @@ theme = "PaperMod"
   name = "首页"
   url = "/"
   weight = 1
+
 [[menu.main]]
   name = "文章"
   url = "/posts/"
   weight = 2
+
 [[menu.main]]
   name = "关于"
   url = "/about/"
@@ -22,6 +24,7 @@ theme = "PaperMod"
 [params]
   defaultTheme = "auto"
   # 首页欢迎语（可选）
-  homeInfoParams = { Title = "你好 👋", Content = "这里是我的博客。" }
+  homeInfoParams = { Title = "Hello 👋", Content = "Welcome to my blog" }
 
   
+
