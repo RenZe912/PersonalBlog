@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>首页 on 我的博客</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in 首页 on 我的博客</description>
+    <generator>Hugo -- 0.152.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 22 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>http://localhost:1313/posts/hello-world/</link>
+      <pubDate>Wed, 22 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hello-world/</guid>
+      <description>&lt;p&gt;第一篇文章！这是一篇用 Hugo + PaperMod + Vercel 部署的示例。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// 示例代码块（启用行号与语法猜测）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() { &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello world&amp;#34;&lt;/span&gt;) }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;---&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;#&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;) &lt;span style=&#34;color:#a6e22e&#34;&gt;自定义页脚&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;（&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;可选&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;##&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;`layouts/partials/footer.html`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;``&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;`&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{{&lt;span style=&#34;color:#75715e&#34;&gt;/* 仅在需要“备案/版权/自定义链接”时添加此文件；否则可删除整个 layouts 目录 */&lt;/span&gt;}}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;footer&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;footer&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;container&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;style&lt;/span&gt;=&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-align:center; opacity:0.75; font-size:0.9rem;&amp;#34;&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &amp;lt;&lt;span style=&#34;color:#a6e22e&#34;&gt;span&lt;/span&gt;&amp;gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;©&lt;/span&gt; {{ &lt;span style=&#34;color:#a6e22e&#34;&gt;now&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Year&lt;/span&gt; }} {{ .&lt;span style=&#34;color:#a6e22e&#34;&gt;Site&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Params&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; }} &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;·&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;由&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Hugo&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PaperMod&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;驱动&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;·&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;部署于&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Vercel&lt;/span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;span&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;div&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;footer&lt;/span&gt;&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
