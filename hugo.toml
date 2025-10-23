@@ -1,21 +1,21 @@
 baseURL = "/"
 languageCode = "zh-cn"
-title = "我的博客"
+title = "My Blog"
 theme = "PaperMod"
 
 [pagination]
   pagerSize = 10
 
 [[menu.main]]
-  name = "首页"
+  name = "Home Page"
   url = "/"
   weight = 1
 [[menu.main]]
-  name = "文章"
+  name = "Article"
   url = "/posts/"
   weight = 2
 [[menu.main]]
-  name = "关于"
+  name = "About Me"
   url = "/about/"
   weight = 3
 
