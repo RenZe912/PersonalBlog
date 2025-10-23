@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "zh-cn"
-title = "My Blog"
+title = "My Blog and My Little Home"
 theme = "PaperMod"
 
 [pagination]
