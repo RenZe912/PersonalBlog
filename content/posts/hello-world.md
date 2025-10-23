@@ -1,5 +1,5 @@
 ---
-title: "Hello YQY"
+title: "Welcome!"
 date: 2025-10-22
 draft: false
 ---
