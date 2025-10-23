@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
 
-# 关键：允许写入 gh-pages 分支
 permissions:
   contents: write
 
@@ -15,8 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true
           fetch-depth: 0
+          # 如果主题是子模块才设为 true；内置主题就不要加
+          # submodules: true
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -24,8 +24,8 @@ jobs:
           hugo-version: '0.152.0'
           extended: true
 
-      - name: Build
-        run: hugo --gc --minify --baseURL "https://renze912.github.io/PersonalBlog/"
+      - name: Build (custom domain)
+        run: hugo --gc --minify --baseURL "https://andychang01.cn/"
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
@@ -34,4 +34,5 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
-          # enable_jekyll: false  # 可选：自动加 .nojekyll
+          cname: andychang01.cn       # 自动在 gh-pages 里生成 CNAME
+          enable_jekyll: false        # 自动加 .nojekyll
