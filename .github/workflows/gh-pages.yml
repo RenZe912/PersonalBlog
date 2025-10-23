@@ -2,18 +2,20 @@ name: Deploy Hugo to GitHub Pages
 
 on:
   push:
-    branches:
-      - main   # 每次 push main 分支都会触发自动部署
+    branches: [ main ]
+
+# 关键：允许写入 gh-pages 分支
+permissions:
+  contents: write
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: true  # 主题如果是子模块需要这一行
+          submodules: true
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -22,7 +24,7 @@ jobs:
           hugo-version: '0.152.0'
           extended: true
 
-      - name: Build site
+      - name: Build
         run: hugo --gc --minify --baseURL "https://renze912.github.io/PersonalBlog/"
 
       - name: Deploy to gh-pages
@@ -32,5 +34,4 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           force_orphan: true
-
-    
+          # enable_jekyll: false  # 可选：自动加 .nojekyll
