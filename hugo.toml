@@ -1,23 +1,70 @@
-baseURL = "/"
-languageCode = "zh-cn"
-title = "My Blog and My Little Home"
+baseURL = "https://andychang01.cn/"
+languageCode = "en-us"
+title = "Andy Chang"
 theme = "PaperMod"
+summaryLength = 0
 
 [pagination]
   pagerSize = 10
 
+# 主页信息（个人卡片/简介）
+[params]
+  defaultTheme = "auto"
+  # 只显示日期，不显示阅读时长
+  ShowReadingTime = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowShareButtons = false
+
+  # 主页 Profile 模式
+  [params.profileMode]
+    enabled = true
+    title = "Andy Chang"
+    subtitle = "Thinking and Exploring"
+    imageUrl = ""                 # 可填头像 URL（例如 /images/avatar.jpg）
+    imageTitle = "Avatar"
+    imageWidth = 160
+    imageHeight = 160
+    buttons = [
+      { name = "Posts", url = "/posts/" },
+      { name = "About", url = "/about/" }
+    ]
+
+  # 社交图标（先放占位，按需替换链接）
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/RenZe912"
+  [[params.socialIcons]]
+    name = "x"
+    url = "https://x.com/your_handle"
+  [[params.socialIcons]]
+    name = "wechat"
+    url = "/images/wechat-qr.png"   # 放你的二维码图片
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:you@example.com"
+
+# 菜单（顺序与权重）
 [[menu.main]]
-  name = "Home Page"
+  identifier = "home"
+  name = "Home"
   url = "/"
   weight = 1
+
 [[menu.main]]
-  name = "Article"
+  identifier = "posts"
+  name = "Posts"
   url = "/posts/"
   weight = 2
+
 [[menu.main]]
-  name = "About Me"
+  identifier = "about"
+  name = "About"
   url = "/about/"
   weight = 3
 
-[params]
-  defaultTheme = "auto"
+[[menu.main]]
+  identifier = "categories"
+  name = "Categories"
+  url = "/categories/"
+  weight = 4
