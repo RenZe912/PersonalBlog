@@ -7,44 +7,64 @@ summaryLength = 0
 [pagination]
   pagerSize = 10
 
-# 主页信息（个人卡片/简介）
+[taxonomies]
+  tag = "tags"         # 仅保留 tags
+  # category = "categories"  # 已移除
+
+# -----------------------------
+# 基础参数设置
+# -----------------------------
 [params]
-  defaultTheme = "auto"
-  # 只显示日期，不显示阅读时长
+  defaultTheme = "light"         # 固定亮色（灰橙风格）
+  disableThemeToggle = true      # 禁止访客切换深色
   ShowReadingTime = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowShareButtons = false
+  ShowToc = false                # 默认不显示目录，可在文章中单独启用
+  customCSS = [
+    "css/extended/title-rounded.css",
+    "css/extended/theme-grey-orange-futuristic.css",
+    "css/extended/home-grid.css"
+  ]
 
   # 主页 Profile 模式
   [params.profileMode]
     enabled = true
     title = "Andy Chang"
     subtitle = "Thinking and Exploring"
-    imageUrl = ""                 # 可填头像 URL（例如 /images/avatar.jpg）
-    imageTitle = "Avatar"
-    imageWidth = 160
-    imageHeight = 160
     buttons = [
+      { name = "About", url = "/about/" },
       { name = "Posts", url = "/posts/" },
-      { name = "About", url = "/about/" }
+      { name = "Archive", url = "/archives/" }
     ]
 
-  # 社交图标（先放占位，按需替换链接）
+  # 主题细节（灰橙未来感）
+  [params.assets]
+    disableFingerprinting = true
+
+  [params.cover]
+    linkFullImages = true
+
+  # 社交图标（按需填写）
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/RenZe912"
+
   [[params.socialIcons]]
-    name = "x"
-    url = "https://x.com/your_handle"
+    name = "X"     # 如果 X 图标显示异常可改成 "x-twitter"
+    url = "https://x.com/ChangAndy260973"
+
   [[params.socialIcons]]
     name = "wechat"
-    url = "/images/wechat-qr.png"   # 放你的二维码图片
+    url = "/images/wechat-qr.png"   # 二维码图放在 static/images 下
   [[params.socialIcons]]
-    name = "email"
-    url = "mailto:you@example.com"
+  name = "bilibili"
+  url = "https://space.bilibili.com/353210585?spm_id_from=333.337.0.0"
 
-# 菜单（顺序与权重）
+# -----------------------------
+# 顶部导航菜单（Home → About → Posts → Archive）
+# -----------------------------
 [[menu.main]]
   identifier = "home"
   name = "Home"
@@ -52,19 +72,19 @@ summaryLength = 0
   weight = 1
 
 [[menu.main]]
-  identifier = "posts"
-  name = "Posts"
-  url = "/posts/"
-  weight = 2
-
-[[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
   weight = 3
 
 [[menu.main]]
-  identifier = "categories"
-  name = "Categories"
-  url = "/categories/"
+  identifier = "archive"
+  name = "Archive"
+  url = "/archive/"
   weight = 4

@@ -1,7 +1,8 @@
 ---
-title: "Welcome!"
-date: 2025-10-22
+title: "Large Language Models Intro"
+date: "2025-10-23T10:00:00+08:00"
 draft: false
+tags: ["LLM", "AI"]
 ---
 # Hello World
 

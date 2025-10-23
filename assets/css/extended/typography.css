@@ -1,0 +1,53 @@
+/* ============ Global Typography: Inter + Noto Sans SC ============ */
+:root {
+  --font-sans: "Inter", "Noto Sans SC", -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, "Helvetica Neue", Arial,
+               "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+               "Noto Sans CJK SC", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* 全站正文 */
+html, body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.65;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); /* 柔和全局阴影 */
+}
+
+
+
+/* 标题光晕 + 动态阴影效果 */
+h1, .post-title, .profile .title,
+h2, h3, .page-title, .single-title {
+  position: relative;
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(255, 140, 0, 0.15),
+               0 0 20px rgba(255, 170, 50, 0.2);
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 悬停时轻微浮起、发光 */
+h1:hover, .profile .title:hover,
+h2:hover, h3:hover {
+  text-shadow: 0 6px 20px rgba(255, 140, 0, 0.25),
+               0 0 30px rgba(255, 180, 80, 0.35);
+  transform: translateY(-2px);
+}
+
+/* 导航、按钮、卡片标题 */
+.header .logo a,
+.menu a,
+.button, a.button,
+.post-entry .entry-header a {
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+/* 代码字体 */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}

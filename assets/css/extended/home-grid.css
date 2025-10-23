@@ -1,0 +1,33 @@
+/* 网格容器（首页文章列表） */
+.post-list, .posts, .home-info + .post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* 卡片外观 */
+.post-entry {
+  border: 1px solid var(--theme);
+  border-radius: 16px;
+  padding: 16px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.post-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* 只显示标题 + 日期（隐藏摘要等） */
+.post-entry .entry-content,
+.post-entry .post-summary,
+.post-entry .entry-footer .tags,
+.post-entry .entry-footer .read-time {
+  display: none !important;
+}
+
+/* 日期排版 */
+.post-entry .entry-footer .meta {
+  display: inline-block;
+  opacity: .7;
+  font-size: .9rem;
+}

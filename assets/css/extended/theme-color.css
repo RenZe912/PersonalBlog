@@ -1,0 +1,134 @@
+/* ===== Grey × Orange · Futuristic (Light-only) ===== */
+:root {
+  /* 背景与卡片 */
+  --theme: #eeeeee;              /* 页面浅灰 */
+  --entry: #ffffff;              /* 卡片白 */
+  --text: #191a1b;               /* 主文字 */
+  --secondary: #686c72;          /* 次级文字 */
+  --border: rgba(0, 0, 0, 0.08); /* 边框淡灰 */
+
+  /* 主题橙 & 渐变 */
+  --primary: #ff7a00;
+  --primary-weak: rgba(255,122,0,.12);
+  --primary-border: rgba(255,122,0,.22);
+  --link: #ff7a00;
+  --link-hover: #e56e00;
+  --accent-grad: linear-gradient(90deg, #ff7a00, #ff9f2a);
+
+  /* 未来感轻光效 */
+  --glow: 0 6px 18px rgba(255,122,0,.10);
+  --glow-strong: 0 10px 28px rgba(255,122,0,.18);
+  --ring: 0 0 0 3px rgba(255,122,0,.18);
+}
+
+/* 页面背景与文字 */
+body {
+  background: var(--theme);
+  color: var(--text);
+}
+
+/* 顶部/页脚：半透明+毛玻璃 */
+.header, .footer {
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(10px) saturate(120%);
+  border-bottom: 1px solid var(--border);
+}
+
+/* 卡片：轻浮起 + 渐变描边（hover） */
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--glow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
+  overflow: clip;
+}
+.post-entry::after {
+  /* 细到几乎察觉不到的橙色渐变边 */
+  content: "";
+  position: absolute; inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  background: linear-gradient(135deg, transparent 60%, rgba(255,122,0,.15) 100%);
+  opacity: .0; transition: opacity .18s ease;
+}
+.post-entry:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-strong);
+  border-color: var(--primary-border);
+}
+.post-entry:hover::after { opacity: 1; }
+
+/* 仅显示标题+日期的简约卡片（若你之前已有 home-grid.css，可保留一起用） */
+.post-entry .entry-content,
+.post-entry .post-summary,
+.post-entry .entry-footer .tags,
+.post-entry .entry-footer .read-time { display: none !important; }
+
+.post-entry .entry-footer .meta {
+  opacity: .8; font-size: .92rem;
+}
+
+/* 链接：细下划线 → 动画涌现 */
+a {
+  color: var(--link);
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: color .15s ease, background-size .2s ease;
+}
+a:hover { color: var(--link-hover); background-size: 100% 1px; }
+
+/* 按钮：渐变胶囊 + 轻浮起 */
+.button, a.button, .buttons .button {
+  display: inline-flex; align-items: center; gap: .4rem;
+  background: var(--accent-grad); color: #fff;
+  border: none; border-radius: 12px; padding: 10px 16px;
+  box-shadow: var(--glow);
+  transition: transform .16s ease, box-shadow .16s ease, filter .16s ease;
+}
+.button:hover, a.button:hover { transform: translateY(-1px); box-shadow: var(--glow-strong); filter: brightness(1.03); }
+
+/* 输入/可聚焦元素：柔和焦点环 */
+:focus-visible { outline: none; box-shadow: var(--ring); border-radius: 10px; }
+
+/* 代码块：浅灰面板 + 橙色细描边 */
+pre, code, kbd, samp {
+  background: #f1f2f4 !important;
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 8px;
+}
+pre { box-shadow: inset 0 0 0 1px rgba(255,122,0,.12); }
+
+/* Tag 标签：橙色轻胶囊 */
+.post-tags a {
+  background: var(--primary-weak);
+  color: var(--link);
+  border-radius: 999px; padding: 4px 10px;
+  transition: background .15s ease, transform .15s ease;
+}
+.post-tags a:hover { background: rgba(255,122,0,.22); transform: translateY(-1px); }
+
+/* Profile/Hero：极轻的橙色光晕 */
+.profile { position: relative; }
+.profile::after {
+  content: ""; position: absolute; inset: -60px -40px;
+  background: radial-gradient(60% 40% at 50% 0%, rgba(255,122,0,.12), transparent 60%);
+  pointer-events: none; z-index: -1;
+}
+
+/* 轻呼吸动画（非常克制） */
+@keyframes glowPulse {
+  0% { box-shadow: var(--glow); }
+  100% { box-shadow: var(--glow-strong); }
+}
+.post-entry:hover { animation: glowPulse .5s ease both; }
+
+/* 尊重“减少动态”偏好 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
